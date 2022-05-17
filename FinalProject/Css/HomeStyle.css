@@ -1,0 +1,121 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    
+}
+body{
+    background: -webkit-linear-gradient(right,#090c42,#061637,#3f82a9);
+    font-family: 'Montserrat' , sans-serif;
+    background-size: cover;
+
+
+}
+.body{
+  height:  91.6vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  
+}
+.container{
+    position: relative;
+    width: 400px;
+    background: white;
+    padding: 60px 40px;
+}
+header{
+    font-size: 40px;
+    margin-bottom: 60px;
+    font-family: 'Montserrat' , sans-serif;
+}
+.inputarea , form .button{
+    margin: 25px 0;
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+.inputarea input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid silver;
+  padding-left: 15px;
+  outline: none;
+font-size: 18px;
+transition: 0.8s;
+}
+.inputarea label , span.show{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+   
+}
+.inputarea label {
+    pointer-events: none;
+    color: grey;
+    font-size: 18px;
+    transition: 0.8s;
+    left: 18px;
+}
+span.show{
+    right: 20px;
+    color: #111;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    visibility: hidden;
+    font-family: 'Open Sans' , sans-serif ;
+}
+input:valid ~ span.show {
+    visibility: visible;
+}
+input:focus{
+    border: 1px solid #061637;
+}
+input:focus ~ label , input:valid ~ label{
+ transform: translateY(-33px); 
+ background: white;
+ font-size: 16px;
+ color: #061637;
+}
+form .button{
+    margin-top: 30px;
+    overflow: hidden;
+    z-index: 111;
+
+}
+.button .inner {
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    left: -100%;
+    transition: all 1s;
+    z-index: -1;
+    background: -webkit-linear-gradient(right,#19109e,#3f82a9,#061637,#090c42);
+}
+.button button {
+ width: 100%;
+ height: 100%;
+ border: none;
+ background: none;
+ font-size: 20px;
+ color: white; 
+ cursor: pointer;
+ font-family: 'Montserrat' , sans-serif;
+ outline: none;
+}
+.button:hover .inner{
+    left: 0;
+}
+.button button a {
+    color: white;
+    text-decoration: none;
+}
